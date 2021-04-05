@@ -1,7 +1,12 @@
+//Removed this when converting to a Node module format, used imports from "rectangle.js" instead.
+/*
 const rect = { //an object named rec with 2 methods
     perimeter: (x, y) => 2 * (x + y), //The first method is "perimeter"
     area: (x, y) => x * y // The second method is "area", made into an arrow function
 };
+*/
+
+const rect = require('./rectangle'); //"require" function from Node. "require" function will look for a file named "rectangle.js" in the same folder that this file is in and it will take the exports from that file and set them as properties, or methods, of this "rect" variable object.
 
 function solveRect(l, w) { //A function we created to make use of the "rect" object.  Pass in the values "l" and "w"
     console.log(`Solving for rectangle with dimensions: ${l}, ${w}`); //log the values of "l" and "w" to the console using template literals (backticks, not quote marks)
